@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 import time
 from pathlib import Path
 
@@ -154,7 +153,7 @@ def run_batch_comparison(df: pd.DataFrame) -> dict:
     batch_result = run_batch_baseline(X_train, y_train, X_test, y_test)
 
     print(f"   Batch RF — F1: {batch_result['f1']:.4f}, AUC: {batch_result['roc_auc']:.4f}")
-    print(f"   ⚠️  Note: Batch model is STATIC — it cannot adapt to new fraud patterns")
+    print("   ⚠️  Note: Batch model is STATIC — it cannot adapt to new fraud patterns")
 
     return batch_result
 

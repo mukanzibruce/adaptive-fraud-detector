@@ -6,20 +6,14 @@ and model comparisons as transactions stream through.
 
 from __future__ import annotations
 
-import sys
 import time
-from pathlib import Path
 
 import pandas as pd
-import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from plotly.subplots import make_subplots
 
 from fraud_detector.comparison import ModelComparison
 from fraud_detector.data import (
-    FEATURE_COLUMNS,
-    TARGET_COLUMN,
     get_dataset_stats,
     load_dataset,
     stream_transactions,
@@ -308,7 +302,7 @@ def _run_comparison_mode(
             tps = (i + 1) / elapsed
             progress.progress((i + 1) / n, text=f"Comparing... {i + 1:,}/{n:,} ({tps:,.0f} txn/sec)")
 
-    st.success(f"✅ Comparison complete!")
+    st.success("✅ Comparison complete!")
 
 
 if __name__ == "__main__":

@@ -28,7 +28,7 @@ class TestDriftMonitor:
     def test_no_drift_on_clean_data(self):
         monitor = DriftMonitor(["adwin"])
         for _ in range(100):
-            results = monitor.update(0)  # All correct predictions
+           monitor.update(0)
         assert len(monitor.events) == 0
 
     def test_drift_on_error_spike(self):

@@ -1,7 +1,6 @@
 """Tests for data loading and streaming utilities."""
 
 import numpy as np
-import pytest
 
 from fraud_detector.data import FEATURE_COLUMNS, generate_synthetic_transaction
 

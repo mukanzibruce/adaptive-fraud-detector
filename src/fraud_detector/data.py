@@ -6,10 +6,9 @@ a real-time transaction stream for the online learning pipeline.
 
 from __future__ import annotations
 
-import os
 import time
+from collections.abc import Generator
 from pathlib import Path
-from typing import Generator
 
 import numpy as np
 import pandas as pd

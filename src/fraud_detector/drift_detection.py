@@ -6,7 +6,7 @@ analysis tools to understand when and why drift occurs.
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Any
 
 import structlog
